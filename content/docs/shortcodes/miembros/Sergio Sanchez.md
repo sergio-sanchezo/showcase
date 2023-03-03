@@ -1,4 +1,6 @@
-
+---
+weight: 3
+---
 ## Sergio Alejandro Sanchez Ortiz
 
 I'm a Computer and Systems Engineering student at Universidad Nacional de Colombia
