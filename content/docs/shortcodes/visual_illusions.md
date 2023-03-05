@@ -4,11 +4,14 @@
 
 This illusion shows how our perception of line length is affected by the presence of arrowheads on the ends of the lines.
 
+# The Depth Cue Explanation
+
+Depth plays an important role in our ability to judge distance. One explanation of the Muller-Lyer illusion is that our brains perceive the depths of the two shafts based upon depth cues. When the fins are pointing in toward the shaft of the line, we perceive it as sloping away much like the corner of a building. This depth cue leads us to see that line as further away and therefore shorter.
 
 ## Example
 
 {{< p5-global-iframe id="breath" width="625" height="625" >}}
-  lfunction setup() {
+  function setup() {
   createCanvas(400, 400);
 }
 
@@ -33,3 +36,8 @@ function draw() {
   line(300, 200, 280, 180);
 }
 {{< /p5-global-iframe >}}
+
+
+# References
+
+How the Muller-Lyer Illusion Is Used in Psychology. (2020, 10 mayo). Verywell Mind. https://www.verywellmind.com/how-the-muller-lyer-illusion-works-4111110
