@@ -1,43 +1,35 @@
 
 
-# Ponzo illusion 
+# Müller-Lyer Illusion 
 
-This illusion occurs when two identically sized objects appear to be different sizes because of their surrounding context. It has practical applications in product design and advertising to create the illusion of size or depth.
+This illusion shows how our perception of line length is affected by the presence of arrowheads on the ends of the lines.
 
 
-## Widget example
+## Example
 
 {{< p5-global-iframe id="breath" width="625" height="625" >}}
-  let angle = 0;
-  let speed = 0.06;
+  lfunction setup() {
+  createCanvas(400, 400);
+}
 
-  function setup() {
-    createCanvas(600, 600);
-  }
-
-  function draw() {
-    background(255, 255, 255);
-    rotateSquare();
-    if (!mouseIsPressed) {
-      strokeWeight(0);
-      stroke(0);
-      fill(255, 140, 0);
-      rect(0, 0, 281, 281);
-      rect(318, 0, 281, 281);
-      rect(0, 318, 281, 281);
-      rect(318, 318, 281, 281);
-    }
-  }
-
-  function rotateSquare() {
-    push();
-    angle += speed;
-    strokeWeight(0);
-    stroke(0);
-    fill(0, 0, 255);
-    translate(width / 2, height / 2);
-    rotate(angle);
-    rect(-187.5, -187.5, 375, 375);
-    pop();
-  }
+function draw() {
+  background(220);
+  // primera linea
+  line(100, 140, 300, 140);
+  //flecha 1
+  line(100, 140, 80, 120);
+  line(100, 140, 80, 160);
+  //flecha 2
+  line(300, 140, 320, 120);
+  line(300, 140, 320, 160);
+  
+  //segunda linea
+  line(100, 200, 300, 200);
+  //flecha 1
+  line(100, 200, 120, 220);
+  line(100, 200, 120, 180);
+  //flecha 2
+  line(300, 200, 280, 220);
+  line(300, 200, 280, 180);
+}
 {{< /p5-global-iframe >}}
