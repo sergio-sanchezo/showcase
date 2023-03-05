@@ -7,26 +7,37 @@ This illusion occurs when two identically sized objects appear to be different s
 
 ## Widget example
 
-{{< details title="p5-widget markdown" open=false >}}
-{{< highlight html >}}
-{{</* p5-widget autoplay=true height="400" width="400" ver="1.5.0" >}}
-function setup() {
-  createCanvas(300, 300);
-}
+{{< p5-global-iframe id="breath" width="625" height="625" >}}
+  let angle = 0;
+  let speed = 0.06;
 
-function draw() {
-  background(255, 0, 255);
-}
-{{< /p5-widget */>}}
-{{< /highlight >}}
-{{< /details >}}
+  function setup() {
+    createCanvas(600, 600);
+  }
 
-{{< p5-widget autoplay=true height="400" width="400" ver="1.5.0" >}}
-function setup() {
-  createCanvas(300, 300);
-}
+  function draw() {
+    background(255, 255, 255);
+    rotateSquare();
+    if (!mouseIsPressed) {
+      strokeWeight(0);
+      stroke(0);
+      fill(255, 140, 0);
+      rect(0, 0, 281, 281);
+      rect(318, 0, 281, 281);
+      rect(0, 318, 281, 281);
+      rect(318, 318, 281, 281);
+    }
+  }
 
-function draw() {
-  background(255, 0, 255);
-}
-{{< /p5-widget >}}
+  function rotateSquare() {
+    push();
+    angle += speed;
+    strokeWeight(0);
+    stroke(0);
+    fill(0, 0, 255);
+    translate(width / 2, height / 2);
+    rotate(angle);
+    rect(-187.5, -187.5, 375, 375);
+    pop();
+  }
+{{< /p5-global-iframe >}}
