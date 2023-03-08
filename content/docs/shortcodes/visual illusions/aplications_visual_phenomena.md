@@ -2,6 +2,9 @@
 weight: 2
 ---
 
+{{< hint info >}} **Exercise**
+Study, implement and discuss possible applications of some known visual phenomena and optical illusions.{{< /hint >}}
+
 # Müller-Lyer Illusion
 
 This illusion shows how our perception of line length is affected by the presence of arrowheads on the ends of the lines.
@@ -14,7 +17,7 @@ Depth plays an important role in our ability to judge distance. One explanation 
 
 {{< p5-global-iframe id="breath" width="625" height="625" >}}
 function setup() {
-createCanvas(400, 400);
+createCanvas(625, 625);
 }
 
 function draw() {
