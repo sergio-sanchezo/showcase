@@ -47,7 +47,7 @@ line(300, 200, 280, 180);
 
 # Grid illusion 
 
-The scintillating grid illusion is an optical illusion, discovered by E. and B. Lingelbach and M. Schrauf in 1994.[2] It is often considered a variation of the Hermann grid illusion but possesses different properties.[2][3]
+The scintillating grid illusion is an optical illusion, discovered by E. and B. Lingelbach and M. Schrauf in 1994. It is often considered a variation of the Hermann grid illusion but possesses different properties.
 
 It is constructed by superimposing white discs on the intersections of orthogonal gray bars on a black background. Dark dots seem to appear and disappear rapidly at random intersections, hence the label "scintillating". When a person keeps his or her eyes directly on a single intersection, the dark dot does not appear. The dark dots disappear if one is too close to or too far from the image.
 
@@ -84,3 +84,4 @@ function draw() {
 # References
 
 How the Muller-Lyer Illusion Is Used in Psychology. (2020, 10 mayo). Verywell Mind. https://www.verywellmind.com/how-the-muller-lyer-illusion-works-4111110
+Wikipedia contributors. (2022, 20 diciembre). Grid illusion. Wikipedia. https://en.wikipedia.org/wiki/Grid_illusion
