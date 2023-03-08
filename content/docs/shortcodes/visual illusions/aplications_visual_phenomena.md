@@ -15,9 +15,10 @@ Depth plays an important role in our ability to judge distance. One explanation 
 
 ## Example
 
-{{< p5-global-iframe id="breath" width="625" height="625" >}}
+{{< p5-global-iframe id="breath" width="400" height="400" >}}
+
 function setup() {
-createCanvas(625, 625);
+createCanvas(400, 400);
 }
 
 function draw() {
