@@ -1,7 +1,10 @@
 
-
-
+---
+weight: 3
+---
+# Moire Kinegram
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
+
 function setup() {
   createCanvas(500, 500);
   frameRate(200);
@@ -24,8 +27,6 @@ function draw() {
   for(k=0;k<=50;k++){
     line((frameCount * 10) % width-5*k, 0, (frameCount * 10) % width-5*k, height);
   }
-  
-  
 }
 
 {{< /p5-global-iframe >}}
