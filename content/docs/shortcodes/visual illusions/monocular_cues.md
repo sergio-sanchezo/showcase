@@ -84,3 +84,7 @@ head.appendChild(style);
 style();
 
 {{< /p5-global-iframe >}}
+
+# References
+
+Goldstein, E. B., & Cacciamani, L. (2021). Sensation and perception. Cengage Learning.

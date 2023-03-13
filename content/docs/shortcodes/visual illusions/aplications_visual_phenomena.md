@@ -43,9 +43,7 @@ line(300, 200, 280, 180);
 }
 {{< /p5-global-iframe >}}
 
-
-
-# Grid illusion 
+# Grid illusion
 
 The scintillating grid illusion is an optical illusion, discovered by E. and B. Lingelbach and M. Schrauf in 1994. It is often considered a variation of the Hermann grid illusion but possesses different properties.
 
@@ -59,25 +57,25 @@ let side = 600;
 let separation = 60;
 let numberOfLines = side/separation;
 function setup() {
-  createCanvas(side, side);
+createCanvas(side, side);
 }
 
 function draw() {
-  background(0);
-  stroke(215);
-  strokeWeight(10);
-  for (i=0;i< numberOfLines;i++) {
-    stroke(200);
-    line(0, i*separation, side, i*separation);
-    line(i*separation, 0, i*separation, side);
-  }
-  for (j=0;j<numberOfLines;j++) {
-        for (k=0; k<numberOfLines; k++) {
-        stroke(255);
-        circle(j*separation,k*separation,5);
-  }
-  }
-  
+background(0);
+stroke(215);
+strokeWeight(10);
+for (i=0;i< numberOfLines;i++) {
+stroke(200);
+line(0, i*separation, side, i*separation);
+line(i*separation, 0, i*separation, side);
+}
+for (j=0;j<numberOfLines;j++) {
+for (k=0; k<numberOfLines; k++) {
+stroke(255);
+circle(j*separation,k*separation,5);
+}
+}
+
 }
 {{< /p5-global-iframe >}}
 
