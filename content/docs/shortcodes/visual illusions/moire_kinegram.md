@@ -7,7 +7,7 @@ Implement a kinegram and some moiré patterns which are close related visual phe
   {{< /hint >}}
 
 
-# Moire kinegram
+# Moire Pattern
 
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 let angle = 0
