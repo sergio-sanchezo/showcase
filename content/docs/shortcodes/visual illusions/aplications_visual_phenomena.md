@@ -16,15 +16,21 @@ It is constructed by superimposing white discs on the intersections of orthogona
 
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 
+
 let sliderValue = 1;
 let side = 3000;
 let separation = 60;
 let numberOfLines = side/separation;
+let minStroke = 5;
 function setup() {
   createCanvas(500, 500);
   slider = createSlider(0.1, 5, sliderValue, 0.1);
   slider.position(10, 10);
   slider.style('width', '80px');
+  
+  slider_width = createSlider(0.1, 5, sliderValue, 0.1);
+  slider_width.position(10, 30);
+  slider_width.style('width', '80px');
 }
 
 function draw() {
@@ -34,10 +40,11 @@ function draw() {
   // Set the scale of the canvas based on the value of the slider
   scale(zoom);
   
+  strokeVal = max(minStroke, 30/slider_width.value());
   
   background(0);
   stroke(215);
-  strokeWeight(10);
+  strokeWeight(strokeVal);
   for (i=0;i< numberOfLines;i++) {
   stroke(200);
   line(0, i*separation, side, i*separation);
