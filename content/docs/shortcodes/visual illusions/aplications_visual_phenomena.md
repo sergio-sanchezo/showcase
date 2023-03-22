@@ -61,7 +61,10 @@ So basically to implement the grid illusions, we have to put a black background,
 
 To do so, we implemented the following code 
 
-```tpl
+---
+
+{{< details "Title" [open] >}}
+```js
 let sliderValue = 1;
 let side = 3000;
 let separation = 60;
@@ -99,6 +102,9 @@ function draw() {
 
 }
 ```
+{{< /details >}}
+
+
 
 # Müller-Lyer Illusion
 
