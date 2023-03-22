@@ -63,8 +63,8 @@ To do so, we implemented the following code
 
 ---
 
-{{< details "Title">}}
-```
+{{< details "Code">}}
+```js
 let sliderValue = 1;
 let side = 3000;
 let separation = 60;
@@ -104,8 +104,37 @@ function draw() {
 ```
 {{< /details >}}
 
+Here we set up a couple of sliders that will help to make the illusion interactive and more interesting
+```js
+function setup() {
+  createCanvas(500, 500);
+  slider = createSlider(0.1, 5, sliderValue, 0.1);
+  slider.position(10, 10);
+  slider.style('width', '80px');
+  
+  slider_width = createSlider(0.1, 5, sliderValue, 0.1);
+  slider_width.position(10, 30);
+  slider_width.style('width', '80px');
+}
+```
+
+Here is the loop to help as create the grid an its points, everything its modular, being influenced by some variables like the separation or number of lines that at the same time are controlled by the sliders.
+
+```js
 
 
+  for (i=0;i< numberOfLines;i++) {
+  stroke(200);
+  line(0, i*separation, side, i*separation);
+  line(i*separation, 0, i*separation, side);
+  }
+  for (j=0;j<numberOfLines;j++) {
+  for (k=0; k<numberOfLines; k++) {
+  stroke(255);
+  circle(j*separation,k*separation,5);
+}
+}
+```
 # Müller-Lyer Illusion
 
 This illusion shows how our perception of line length is affected by the presence of arrowheads on the ends of the lines.
