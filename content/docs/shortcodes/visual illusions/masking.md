@@ -166,6 +166,6 @@ During convolution, the kernel is "slid" or moved over the input image, with eac
 
 
 ## Edges handling
-In the convolution of the code, the concept of "edges" is used to deal with pixels at the image boundaries. In particular, the constrain() function is used to make sure that the position of the pixels does not go outside the allowed range of the image.
+In the convolution of the code, the concept of "edges" is used to deal with pixels at the image boundaries. In particular, the `constrain()` function is used to make sure that the position of the pixels does not go outside the allowed range of the image.
 
 
