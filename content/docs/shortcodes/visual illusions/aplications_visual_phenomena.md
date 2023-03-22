@@ -63,7 +63,7 @@ To do so, we implemented the following code
 
 ---
 
-{{< details "Title" [open] >}}
+{{< details "Title">}}
 ```
 let sliderValue = 1;
 let side = 3000;
