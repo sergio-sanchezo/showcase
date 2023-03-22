@@ -157,5 +157,15 @@ function convolution(x, y, matrix, matrixsize, img) {
 
 {{< /p5-global-iframe >}}
 
+## Convolution
+In the context of computer vision, convolution refers to a mathematical operation that is used for image processing and analysis. It involves applying a filter, also known as a kernel, to an input image in order to produce an output image that emphasizes certain features of the original image, such as edges or textures.
+
+During convolution, the kernel is "slid" or moved over the input image, with each position of the kernel producing a single output pixel. The value of the output pixel is determined by multiplying the corresponding values of the kernel with the input image pixels in that location and then summing the results.
+
+{{< figure src="https://github.com/sergio-sanchezo/showcase/blob/main/content/sketches/convolutionGif.gif" width="300" height="200" resize="yes" >}}
+
+https://github.com/sergio-sanchezo/showcase/blob/main/content/sketches/convolutionGif.gif
+## Edges handling
+In the convolution of the code, the concept of "edges" is used to deal with pixels at the image boundaries. In particular, the constrain() function is used to make sure that the position of the pixels does not go outside the allowed range of the image.
 
 
