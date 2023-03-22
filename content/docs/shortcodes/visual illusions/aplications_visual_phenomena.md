@@ -6,11 +6,11 @@ weight: 2
 Study, implement and discuss possible applications of some known visual phenomena and optical illusions.{{< /hint >}}
 
 
-# Grid illusion
+# Scintillating grid illusion
 
 The scintillating grid illusion is an optical illusion, discovered by E. and B. Lingelbach and M. Schrauf in 1994. It is often considered a variation of the Hermann grid illusion but possesses different properties.
 
-It is constructed by superimposing white discs on the intersections of orthogonal gray bars on a black background. Dark dots seem to appear and disappear rapidly at random intersections, hence the label "scintillating". When a person keeps his or her eyes directly on a single intersection, the dark dot does not appear. The dark dots disappear if one is too close to or too far from the image.
+It is constructed by superimposing white discs on the intersections of orthogonal gray bars on a black background. **Dark dots seem to appear and disappear rapidly at random intersections, hence the label "scintillating"**. When a person keeps his or her eyes directly on a single intersection, the dark dot does not appear. The dark dots disappear if one is too close to or too far from the image.
 
 ## Example
 
@@ -33,15 +33,10 @@ function setup() {
   slider_width.style('width', '80px');
 }
 
-function draw() {
-  // Get the current value of the slider
-  let zoom = slider.value();
-  
-  // Set the scale of the canvas based on the value of the slider
+function draw() { 
+  let zoom = slider.value();  
   scale(zoom);
-  
   strokeVal = max(minStroke, 30/slider_width.value());
-  
   background(0);
   stroke(215);
   strokeWeight(strokeVal);
@@ -60,7 +55,17 @@ function draw() {
 }
 {{< /p5-global-iframe >}}
 
+# Solution
 
+So basically to implement the grid illusions, we have to put a black background, then draw a gray grid, with white points that cover the intersection of rows and columns.
+
+To do so, we implemented the following code 
+
+```
+var add2 = function(number) {
+  return number + 2;
+}
+```
 
 # Müller-Lyer Illusion
 
