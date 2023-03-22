@@ -64,7 +64,7 @@ To do so, we implemented the following code
 ---
 
 {{< details "Title" [open] >}}
-```js
+```
 let sliderValue = 1;
 let side = 3000;
 let separation = 60;
