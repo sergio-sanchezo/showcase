@@ -160,32 +160,108 @@ Depth plays an important role in our ability to judge distance. One explanation 
 
 {{< p5-global-iframe id="breath" width="400" height="400" >}}
 
+
 function setup() {
-createCanvas(400, 400);
+  createCanvas(400, 400);
+  slider = createSlider(50, 200, 100, 0.1);
+  slider.position(10, 10);
+  slider.style('width', '80px');
 }
 
 function draw() {
 background(220);
+  let sep = slider.value()
 // primera linea
-line(100, 140, 300, 140);
+line(sep, 140, 400-sep, 140);
 //flecha 1
-line(100, 140, 80, 120);
-line(100, 140, 80, 160);
+line(sep, 140, sep-20, 120);
+line(sep, 140, sep-20, 160);
 //flecha 2
-line(300, 140, 320, 120);
-line(300, 140, 320, 160);
+line(400-sep, 140, 400-sep+20, 120);
+line(400-sep, 140, 400-sep+20, 160);
 
 //segunda linea
-line(100, 200, 300, 200);
+line(sep, 200, 400-sep, 200);
 //flecha 1
-line(100, 200, 120, 220);
-line(100, 200, 120, 180);
+line(sep, 200, sep+20, 220);
+line(sep, 200, sep+20, 180);
 //flecha 2
-line(300, 200, 280, 220);
-line(300, 200, 280, 180);
+line(400-sep, 200, 400-sep-20, 220);
+line(400-sep, 200, 400-sep-20, 180);
 }
+
 {{< /p5-global-iframe >}}
 
+
+# Solution
+
+This ilussion is pretty simple to implement. We draw two parallel lines, with some y-separation between them, the lines are as said parallel and the same length as well
+in one of them we implement an arrow pointing outwards and the other pointing inward
+
+---
+
+{{< details "Code">}}
+```js
+
+function setup() {
+  createCanvas(400, 400);
+  slider = createSlider(50, 200, 100, 0.1);
+  slider.position(10, 10);
+  slider.style('width', '80px');
+}
+
+function draw() {
+background(220);
+  let sep = slider.value()
+// primera linea
+line(sep, 140, 400-sep, 140);
+//flecha 1
+line(sep, 140, sep-20, 120);
+line(sep, 140, sep-20, 160);
+//flecha 2
+line(400-sep, 140, 400-sep+20, 120);
+line(400-sep, 140, 400-sep+20, 160);
+
+//segunda linea
+line(sep, 200, 400-sep, 200);
+//flecha 1
+line(sep, 200, sep+20, 220);
+line(sep, 200, sep+20, 180);
+//flecha 2
+line(400-sep, 200, 400-sep-20, 220);
+line(400-sep, 200, 400-sep-20, 180);
+}
+```
+{{< /details >}}
+
+Here we set up a slider that will allow the user to experiment with the length of the lines.
+```js
+function setup() {
+  createCanvas(400, 400);
+  slider = createSlider(50, 200, 100, 0.1);
+  slider.position(10, 10);
+  slider.style('width', '80px');
+}
+
+```
+# Conclusion
+
+As humans we have evolved into certain environment and to survive we acquired certain neurological features that would make us more likely to not die, that is why
+we do not see the world as it is, but we see it through perceptions, that are processed by our brain. And or brain tries to give us the most  of this perceptions
+applying patterns that we would generally see.
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Checker_shadow_illusion.svg/200px-Checker_shadow_illusion.svg.png
+Wikipedia, Optical Illusion
+
+In this image for example, our brain recognise that there might be a pattern of white blocks and black blocks alternating, and may be the brain recognises too that the
+cilinder might be producing shadow behind it, therefore the A and B blocks look the same to us(or at least to me), however the blocks are the same color, you can confirm
+it by placing your finger in the middle of them. This is a clear example of our brain trying to jump to fast conclusions but failing to show the reality. But this
+is not necesarilly bad, optical illusions can be a wonderful tool to us in order to create cool art, optical illusions are pretty eye catching and a very entretaining.
+
+# Future Work
+
+With practice we hope to be able to gain more skills in order to implement more and more complex visual illusions. In this area there is also a lot of work to do in the
+understanding of how our brains process the vision, there are a lot of theories of different illusions that we hope are resolved and give us more enlightment.
 
 # References
 
