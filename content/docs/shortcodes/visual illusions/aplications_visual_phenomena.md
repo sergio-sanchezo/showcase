@@ -5,6 +5,19 @@ weight: 2
 {{< hint info >}} **Exercise**
 Study, implement and discuss possible applications of some known visual phenomena and optical illusions.{{< /hint >}}
 
+# Introduction
+
+In visual perception, an optical illusion (also called a visual illusion) is an illusion caused by the visual system and characterized by a visual percept that arguably appears to differ from reality. Illusions come in a wide variety; their categorization is difficult because the underlying cause is often not clear but a classification proposed by Richard Gregory is useful as an orientation. According to that, there are three main classes: physical, physiological, and cognitive illusions, and in each class there are four kinds: Ambiguities, distortions, paradoxes, and fictions. A classical example for a physical distortion would be the apparent bending of a stick half immerged in water; an example for a physiological paradox is the motion aftereffect (where, despite movement, position remains unchanged). An example for a physiological fiction is an afterimage.Three typical cognitive distortions are the Ponzo, Poggendorff, and Müller-Lyer illusion. Wikipedia, 2023
+
+# Previous Work
+
+Looking around on the internet, some examples of optical illusions built on top of p5 can be found. For example in this Medium article the author presents
+the Kanizsa illusion, where illusory contorns give the perception of shape. The author gives a step by step approach to implement the illusion, and a neurological
+explanation.
+
+![Ilussion](https://miro.medium.com/v2/resize:fit:640/format:webp/1*b9pai70Ql9-9TXdvsmrLlg.jpeg)
+
+Medium. Creating Illusions in p5.js -Dynamic Kanizsa Illusion. Nazia Fakhruddin, 2019. https://naziafakhruddin.medium.com/creating-illusions-in-p5-js-dynamic-kanizsa-illusion-part-4-af9fe72c5ec7
 
 # Scintillating grid illusion
 
@@ -176,5 +189,6 @@ line(300, 200, 280, 180);
 
 # References
 
-How the Muller-Lyer Illusion Is Used in Psychology. (2020, 10 mayo). Verywell Mind. https://www.verywellmind.com/how-the-muller-lyer-illusion-works-4111110
-Wikipedia contributors. (2022, 20 diciembre). Grid illusion. Wikipedia. https://en.wikipedia.org/wiki/Grid_illusion
+- How the Muller-Lyer Illusion Is Used in Psychology. (2020, 10 mayo). Verywell Mind. https://www.verywellmind.com/how-the-muller-lyer-illusion-works-4111110
+- Wikipedia contributors. (2022, 20 diciembre). Grid illusion. Wikipedia. https://en.wikipedia.org/wiki/Grid_illusion
+- Wikipedia contributors. (2023, March 21). Optical illusion. In Wikipedia, The Free Encyclopedia. Retrieved March 30, 2023, from https://en.wikipedia.org/wiki/Optical_illusion
