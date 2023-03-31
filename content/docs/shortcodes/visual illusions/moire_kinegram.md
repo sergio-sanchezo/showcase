@@ -9,17 +9,23 @@ Implement a kinegram and some moiré patterns which are close related visual phe
 
 # Introduction
 
-In visual perception, an optical illusion (also called a visual illusion) is an illusion caused by the visual system and characterized by a visual percept that arguably appears to differ from reality. Illusions come in a wide variety; their categorization is difficult because the underlying cause is often not clear but a classification proposed by Richard Gregory is useful as an orientation. According to that, there are three main classes: physical, physiological, and cognitive illusions, and in each class there are four kinds: Ambiguities, distortions, paradoxes, and fictions. A classical example for a physical distortion would be the apparent bending of a stick half immerged in water; an example for a physiological paradox is the motion aftereffect (where, despite movement, position remains unchanged). An example for a physiological fiction is an afterimage.Three typical cognitive distortions are the Ponzo, Poggendorff, and Müller-Lyer illusion. Wikipedia, 2023
+In mathematics, physics, and art, moiré patterns or moiré fringes are large-scale interference patterns that can be produced when a partially opaque ruled pattern with transparent gaps is overlaid on another similar pattern. For the moiré interference pattern to appear, the two patterns must not be completely identical, but rather displaced, rotated, or have slightly different pitch.
+
+Moiré patterns appear in many situations. In printing, the printed pattern of dots can interfere with the image. In television and digital photography, a pattern on an object being photographed can interfere with the shape of the light sensors to generate unwanted artifacts. They are also sometimes created deliberately – in micrometers they are used to amplify the effects of very small movements.
 
 # Previous Work
 
-Looking around on the internet, some examples of optical illusions built on top of p5 can be found. For example in this Medium article the author presents
-the Kanizsa illusion, where illusory contorns give the perception of shape. The author gives a step by step approach to implement the illusion, and a neurological
-explanation.
+In internet you can find plenty of examples of moire projects made on school project or other situations, this gives nice examples and ideas to implement our moire patterns
+and kinegrams, two videos particularly helped my get through this task.
 
-![Ilussion](https://miro.medium.com/v2/resize:fit:640/format:webp/1*b9pai70Ql9-9TXdvsmrLlg.jpeg)
+**Imprime tu ilusión óptica animada super fácil. https://www.youtube.com/watch?v=EZFk4bilOHw**
 
-Medium. Creating Illusions in p5.js -Dynamic Kanizsa Illusion. Nazia Fakhruddin, 2019. https://naziafakhruddin.medium.com/creating-illusions-in-p5-js-dynamic-kanizsa-illusion-part-4-af9fe72c5ec7
+This video gives high quality examples about kinegram, this helped me do the squares design and the pacman one.
+
+**Animated Illusion Tutorial -in p5.js https://www.youtube.com/watch?v=AvCpK23-sVQ**
+
+And this video gave an idea on how to even start doing the task beacuase I was a little lost.
+
 
 
 # Kinegram
@@ -92,10 +98,6 @@ function draw() {
 
 # Solution
 
-So basically to implement the grid illusions, we have to put a black background, then draw a gray grid, with white points that cover the intersection of rows and columns.
-
-To do so, we implemented the following code 
-
 ---
 
 {{< details "Code">}}
@@ -164,7 +166,41 @@ function draw() {
 ```
 {{< /details >}}
 
+Drawing squares (red one)
+
+```js
+function setup() {
+  for (let j = 100; j < 200; j += 6) {
+    stroke(255, 0, 0)
+    line(j, 100, j, 200)
+  }
+}
+```
+
+Drawing pacman. This part required being more careful, a specific set of lines would make the pacman look like it was opening and shuting his mouth.
+There is a set of three lines, one that goes from the upper part to the lower part of the mouth, one that starts from the upper part and goes a little down.
+And one tha goes from the lower part a litte up.
+
+
+```js
+fill(0);
+  arc(200, 300, 100,100, 1.2*PI, 0.8*PI, PIE);
+  
+  
+  for (let j = 0; j < 40; j += 7) {
+    strokeWeight(2);
+    line(160+j, 270, 160+j, 330)
+    strokeWeight(4);
+    line(160+j,270,160+j,285)
+    line(160+j,330,160+j,315)
+  }
+```
+
+
 # Moire Pattern
+
+Here we cover the whole canvas with triangles alternating from white to black, and we have a bunch of black lines that will rotate, "clasing" with the triangles
+and thi is what produces the effect.
 
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 let angle = 0
@@ -213,25 +249,14 @@ for(k=0;k<=500;k++){
 
 # Conclusion
 
-As humans we have evolved into certain environment and to survive we acquired certain neurological features that would make us more likely to not die, that is why
-we do not see the world as it is, but we see it through perceptions, that are processed by our brain. And or brain tries to give us the most  of this perceptions
-applying patterns that we would generally see.
-
-![Cilinder Illusion](https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Checker_shadow_illusion.svg/200px-Checker_shadow_illusion.svg.png)
-Wikipedia, Optical Illusion
-
-In this image for example, our brain recognise that there might be a pattern of white blocks and black blocks alternating, and may be the brain recognises too that the
-cilinder might be producing shadow behind it, therefore the A and B blocks look the same to us(or at least to me), however the blocks are the same color, you can confirm
-it by placing your finger in the middle of them. This is a clear example of our brain trying to jump to fast conclusions but failing to show the reality. But this
-is not necesarilly bad, optical illusions can be a wonderful tool to us in order to create cool art, optical illusions are pretty eye catching and a very entretaining.
+Kinegrams were challenging since you have to be very very careful where you put the lines, otherwise they will not create the effect. 
 
 # Future Work
 
-With practice we hope to be able to gain more skills in order to implement more and more complex visual illusions. In this area there is also a lot of work to do in the
-understanding of how our brains process the vision, there are a lot of theories of different illusions that we hope are resolved and give us more enlightment.
+Crate techniquesand tricks to acommodate the lines easier
 
 # References
 
-- How the Muller-Lyer Illusion Is Used in Psychology. (2020, 10 mayo). Verywell Mind. https://www.verywellmind.com/how-the-muller-lyer-illusion-works-4111110
-- Wikipedia contributors. (2022, 20 diciembre). Grid illusion. Wikipedia. https://en.wikipedia.org/wiki/Grid_illusion
-- Wikipedia contributors. (2023, March 21). Optical illusion. In Wikipedia, The Free Encyclopedia. Retrieved March 30, 2023, from https://en.wikipedia.org/wiki/Optical_illusion
+- Wikipedia. (n.d.). Moiré pattern. In Wikipedia. Retrieved March 30, 2023, from https://en.wikipedia.org/wiki/Moiré_pattern
+- Pacman Moire: https://www.youtube.com/watch?v=EZFk4bilOHw
+- Cuadritos y Lineas pasantes: https://www.youtube.com/watch?v=AvCpK23-sVQ
