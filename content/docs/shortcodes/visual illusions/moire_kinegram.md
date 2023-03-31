@@ -100,7 +100,7 @@ To do so, we implemented the following code
 
 {{< details "Code">}}
 ```js
-{{< p5-global-iframe id="breath" width="600" height="600" >}}
+
 let side = 400;
 let x = 0;
 function setup() {
