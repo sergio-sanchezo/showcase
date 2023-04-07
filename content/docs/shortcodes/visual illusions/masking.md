@@ -504,3 +504,13 @@ function drawHistogram(histogram, x, y, c) {
 }
 ```
 {{< /details >}}
+
+# Conclusion
+The implementation of kernel transformations filter for image processing, image histograms, and brightness transformations have shown to be effective in enhancing and analyzing digital images.
+
+As group we noticed that we were used to think about *processing* limited by the field of parsing data but with this exercise we were able to see how we can use the same concepts to process images in order to give better outputs for the users.
+
+# Future Work
+It is really clear that the applications of this techniques are endless, this image processing methods can be used in multiple applications like medical imaging, image compression, image restoration, image enhancement, image segmentation, and many more.
+
+It would be really challenging to implement some of these techniques in order to solve real-world problems, but it would be a great experience for our profesional career.
