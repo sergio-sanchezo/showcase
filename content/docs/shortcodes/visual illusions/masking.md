@@ -22,8 +22,9 @@ Kernel transformation with convolution is a technique used in image processing t
 |    o    |      Show original image     |
 
 ## Example
+**Note:** A random image is being taken from *https://picsum.photos* feel free to reload this page and see a new image.
 
-{{< p5-global-iframe id="breath" width="625" height="625" >}}
+{{< p5-global-iframe id="breath" width="720" height="390" >}}
 
 let filteredImg;
 let originalPixels;
@@ -32,11 +33,11 @@ const matrixsize = 3;
 let brightnessValue = 0;
 
 function preload() {
-  img = loadImage("https://picsum.photos/550");
+  img = loadImage("https://picsum.photos/340");
 }
 
 function setup() {
-  createCanvas(img.width, img.height);
+  createCanvas(img.width*2, img.height);
   pixelDensity(1);
   img.loadPixels();
   originalPixels = img.pixels.slice();
@@ -126,10 +127,11 @@ function keyPressed() {
 }
 
 function draw() {
+  image(img, img.width, 0, img.width, img.height);
   if (filteredImg) {
-    background(filteredImg);
+    image(filteredImg, 0, 0)
   } else {
-    background(img);
+    image(img, 0, 0)
   }
 }
 
@@ -157,6 +159,7 @@ function convolution(x, y, matrix, matrixsize, img) {
 
 {{< /p5-global-iframe >}}
 
+
 ## Convolution
 In the context of computer vision, convolution refers to a mathematical operation that is used for image processing and analysis. It involves applying a filter, also known as a kernel, to an input image in order to produce an output image that emphasizes certain features of the original image, such as edges or textures.
 
@@ -168,4 +171,59 @@ During convolution, the kernel is "slid" or moved over the input image, with eac
 ## Edges handling
 In the convolution of the code, the concept of "edges" is used to deal with pixels at the image boundaries. In particular, the `constrain()` function is used to make sure that the position of the pixels does not go outside the allowed range of the image.
 
+# Image histogram
 
+## Example
+
+{{< p5-global-iframe id="breath" width="650" height="330" >}}
+
+let img;
+let rhisto, ghisto, bhisto;
+const histogramWidth = 256;
+const histogramHeight = 100;
+
+function preload() {
+  img = loadImage("https://picsum.photos/300");
+}
+
+function setup() {
+  createCanvas(img.width*2, img.height);
+  pixelDensity(1);
+
+  img.loadPixels();
+  rhisto = new Array(histogramWidth).fill(0);
+  ghisto = new Array(histogramWidth).fill(0);
+  bhisto = new Array(histogramWidth).fill(0);
+  for (let i = 0; i < img.pixels.length; i += 4) {
+    let r = img.pixels[i];
+    let g = img.pixels[i + 1];
+    let b = img.pixels[i + 2];
+    rhisto[r]++;
+    ghisto[g]++;
+    bhisto[b]++;
+  }
+
+}
+
+function draw() {
+  background(0);
+  image(img, 0, 0);
+
+  // draw the histograms
+  stroke(0);
+  noFill();
+  drawHistogram(rhisto, img.width, img.height/1.5, color(255, 0, 0, 140));
+  drawHistogram(ghisto, img.width, img.height/1.5, color(0, 255, 0, 140));
+  drawHistogram(bhisto, img.width, img.height/1.5, color(0, 0, 255, 140));
+}
+
+function drawHistogram(histogram, x, y, c) {
+  const histogramMax = max(histogram);
+  stroke(c);
+  for (let i = 0; i < histogram.length; i++) {
+    let h = map(histogram[i], 0, histogramMax, 0, histogramHeight);
+    line(x + i, y, x + i, y - h);
+  }
+}
+
+{{< /p5-global-iframe >}}
