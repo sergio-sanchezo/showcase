@@ -283,7 +283,7 @@ function layerSix() {
 {{< /p5-global-iframe >}}
 
 
-# Parallax Illusion
+# Parallax Illusion - Solution
 
 The parallax illusion is a monocular cue that occurs when an observer's viewpoint changes. It is the apparent shift in the relative positions of objects caused by the motion of the observer. When the observer moves, the position of nearby objects changes more than that of distant objects, creating a relative motion between the objects in the foreground and the background. This relative motion is known as the parallax effect, and our brains use it to estimate the depth and distance of objects in our visual field.
 
