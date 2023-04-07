@@ -1,17 +1,127 @@
 <!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Exercise
 Implement in software an image processing web app supporting different image kernels and supporting:
-Image histogram visualization. Different lightness (coloring brightness) tools. Kernel transformations # Kernel transformation with convolution is a technique used in image processing to apply a filter or transformation to an image. In this technique, a small matrix, called a kernel or filter, is moved over the image, and for each pixel, the values of neighboring pixels are multiplied by the corresponding values in the kernel, and the results are summed up."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Exercise
+Image histogram visualization. Different lightness (coloring brightness) tools. Introduction # In image processing, a kernel, convolution matrix, or mask is a small matrix used for blurring, sharpening, embossing, edge detection, and more. This is accomplished by doing a convolution between the kernel and an image. Or more simply, when each pixel in the output image is a function of the nearby pixels (including itself) in the input image, the kernel is that function."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Exercise
 Implement in software an image processing web app supporting different image kernels and supporting:
-Image histogram visualization. Different lightness (coloring brightness) tools. Kernel transformations # Kernel transformation with convolution is a technique used in image processing to apply a filter or transformation to an image. In this technique, a small matrix, called a kernel or filter, is moved over the image, and for each pixel, the values of neighboring pixels are multiplied by the corresponding values in the kernel, and the results are summed up."><meta property="og:type" content="article"><meta property="og:url" content="https://sergio-sanchezo.github.io/showcase/docs/shortcodes/visual-illusions/masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-04-06T22:54:29-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+Image histogram visualization. Different lightness (coloring brightness) tools. Introduction # In image processing, a kernel, convolution matrix, or mask is a small matrix used for blurring, sharpening, embossing, edge detection, and more. This is accomplished by doing a convolution between the kernel and an image. Or more simply, when each pixel in the output image is a function of the nearby pixels (including itself) in the input image, the kernel is that function."><meta property="og:type" content="article"><meta property="og:url" content="https://sergio-sanchezo.github.io/showcase/docs/shortcodes/visual-illusions/masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-04-07T00:30:08-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
 <script defer src=/showcase/en.search.min.3a8d658c77eb93c7f12a2b8af49a700131e474f288eefb605d9fa61576dbe5a7.js integrity="sha256-Oo1ljHfrk8fxKiuK9JpwATHkdPKI7vtgXZ+mFXbb5ac=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><input type=checkbox id=section-28af9825a6c9a42a944ad080d209e122 class=toggle>
 <label for=section-28af9825a6c9a42a944ad080d209e122 class="flex justify-between"><a href=/showcase/docs/shortcodes/miembros/>Miembros</a></label><ul><li><a href=/showcase/docs/shortcodes/miembros/Arturo-Ascarza/>Arturo Ascarza</a></li><li><a href=/showcase/docs/shortcodes/miembros/Carlos-Cortes/>Carlos Cortes</a></li><li><a href=/showcase/docs/shortcodes/miembros/Sergio-Sanchez/>Sergio Sanchez</a></li></ul></li><li><input type=checkbox id=section-ec67a64aba70b9df3d2a9acd6c92e3bc class=toggle>
 <label for=section-ec67a64aba70b9df3d2a9acd6c92e3bc class="flex justify-between"><a href=/showcase/docs/shortcodes/p5/>P5</a></label><ul><li><a href=/showcase/docs/shortcodes/p5/iframe/>Iframe</a></li><li><a href=/showcase/docs/shortcodes/p5/div/>Div</a></li></ul></li><li><a href=/showcase/docs/shortcodes/tabs/>Tabs</a></li><li><input type=checkbox id=section-f46a4e810e0595032edc1fcc1384d4ee class=toggle checked>
 <label for=section-f46a4e810e0595032edc1fcc1384d4ee class="flex justify-between"><a href=/showcase/docs/shortcodes/visual-illusions/>Visual Illusions</a></label><ul><li><a href=/showcase/docs/shortcodes/visual-illusions/monocular_cues/>Monocular Cues</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/aplications_visual_phenomena/>Aplications Visual Phenomena</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/moire_kinegram/>Moire Kinegram</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/masking/ class=active>Masking</a></li></ul></li></ul></li></ul><ul><li><a href=/showcase/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Masking</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#kernel-transformations>Kernel transformations</a><ul><li><a href=#example>Example</a></li><li><a href=#convolution>Convolution</a></li><li><a href=#edges-handling>Edges handling</a></li></ul></li><li><a href=#image-histogram>Image histogram</a><ul><li><a href=#example-1>Example</a></li></ul></li></ul></nav></aside></header><article class=markdown><blockquote class="book-hint info"><p><strong>Exercise</strong><br>Implement in software an image processing web app supporting different image kernels and supporting:</p><ul><li>Image histogram visualization.</li><li>Different lightness (coloring brightness) tools.</li></ul></blockquote><h1 id=kernel-transformations>Kernel transformations
-<a class=anchor href=#kernel-transformations>#</a></h1><p>Kernel transformation with convolution is a technique used in image processing to apply a filter or transformation to an image. In this technique, a small matrix, called a kernel or filter, is moved over the image, and for each pixel, the values of neighboring pixels are multiplied by the corresponding values in the kernel, and the results are summed up. The resulting value is then assigned to the central pixel. This process is repeated for all pixels in the image, resulting in a transformed image.</p><table><thead><tr><th style=text-align:center><strong>Key</strong></th><th style=text-align:center><strong>Action</strong></th></tr></thead><tbody><tr><td style=text-align:center>r</td><td style=text-align:center>Show kernel for edge detection</td></tr><tr><td style=text-align:center>s</td><td style=text-align:center>Show kernel for sharpen filter</td></tr><tr><td style=text-align:center>b</td><td style=text-align:center>Show kernel for blur filter</td></tr><tr><td style=text-align:center>o</td><td style=text-align:center>Show original image</td></tr></tbody></table><h2 id=example>Example
-<a class=anchor href=#example>#</a></h2><p><strong>Note:</strong> A random image is being taken from <em><a href=https://picsum.photos>https://picsum.photos</a></em> feel free to reload this page and see a new image.</p><iframe id=breath style=width:720px;height:390px srcdoc='
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a><ul><li><a href=#example---previous-work>Example - Previous Work</a></li></ul></li><li><a href=#kernel-transformations>Kernel transformations</a><ul><li><a href=#convolution>Convolution</a></li><li><a href=#solution>Solution</a><ul><li><a href=#edges-handling>Edges handling</a></li><li><a href=#brightness>Brightness</a></li><li><a href=#binds>Binds</a></li><li><a href=#result>Result</a></li><li><a href=#code-explanation>Code explanation</a></li></ul></li></ul></li><li><a href=#image-histogram>Image histogram</a><ul><li><a href=#solution-1>Solution</a><ul><li><a href=#code-explanation-1>Code explanation</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><blockquote class="book-hint info"><p><strong>Exercise</strong><br>Implement in software an image processing web app supporting different image kernels and supporting:</p><ul><li>Image histogram visualization.</li><li>Different lightness (coloring brightness) tools.</li></ul></blockquote><h1 id=introduction>Introduction
+<a class=anchor href=#introduction>#</a></h1><p>In image processing, a kernel, convolution matrix, or mask is a small matrix used for blurring, sharpening, embossing, edge detection, and more. This is accomplished by doing a convolution between the kernel and an image. Or more simply, when each pixel in the output image is a function of the nearby pixels (including itself) in the input image, the kernel is that function. Wikipedia, 2023</p><p>An image histogram is a type of histogram that acts as a graphical representation of the tonal distribution in a digital image. It plots the number of pixels for each tonal value. The horizontal axis of the graph represents the tonal variations, while the vertical axis represents the total number of pixels in that particular tone. Wikipedia, 2023</p><h1 id=previous-work>Previous Work
+<a class=anchor href=#previous-work>#</a></h1><p>The process of convolution has been widely studied not only in the field of image processing, in mathematics and signal processing, convolution is a mathematical operation that combines two functions (e.g. two signals) to produce a third function that represents how the two input functions overlap. This operation is performed by multiplying and summing the values of the two functions over their overlapping intervals.</p><p>In the case of image processing there are multiple examples of this transformation, the p5 official website has a great example of this transformation, the autor <strong>Dan Shiffman</strong> provides an example applying an edge detection filter.</p><p><a href=https://p5js.org/es/examples/image-convolution.html>Dann shiffman - p5 website</a></p><h2 id=example---previous-work>Example - Previous Work
+<a class=anchor href=#example---previous-work>#</a></h2><p><strong>Note:</strong> A random image is being taken from <em><a href=https://picsum.photos>https://picsum.photos</a></em> feel free to reload this page and see a new image.</p><iframe id=breath style=width:440px;height:440px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+let img;
+let w = 80;
+
+// It's possible to convolve the image with many different 
+// matrices to produce different effects. This is a high-pass 
+// filter; it accentuates the edges. 
+const matrix = [ [ -1, -1, -1 ],
+                 [ -1,  9, -1 ],
+                 [ -1, -1, -1 ] ]; 
+
+function preload() {
+  img = loadImage(&#34;https://picsum.photos/400&#34;);
+}
+
+function setup() {
+  createCanvas(400, 400);
+  img.loadPixels();
+
+  // pixelDensity(1) for not scaling pixel density to display density
+  // for more information, check the reference of pixelDensity()
+  pixelDensity(1);
+}
+
+function draw() {
+  // We're only going to process a portion of the image
+  // so let's set the whole image as the background first
+  background(img);
+
+  // Calculate the small rectangle we will process
+  const xstart = constrain(mouseX - w/2, 0, img.width);
+  const ystart = constrain(mouseY - w/2, 0, img.height);
+  const xend = constrain(mouseX + w/2, 0, img.width);
+  const yend = constrain(mouseY + w/2, 0, img.height);
+  const matrixsize = 3;
+
+  loadPixels();
+  // Begin our loop for every pixel in the smaller image
+  for (let x = xstart; x < xend; x++) {
+    for (let y = ystart; y < yend; y++ ) {
+      let c = convolution(x, y, matrix, matrixsize, img);
+      
+      // retrieve the RGBA values from c and update pixels()
+      let loc = (x + y*img.width) * 4;
+      pixels[loc] = red(c);
+      pixels[loc + 1] = green(c);
+      pixels[loc + 2] = blue(c);
+      pixels[loc + 3] = alpha(c);
+    }
+  }
+  updatePixels();
+}
+
+function convolution(x, y, matrix, matrixsize, img) {
+  let rtotal = 0.0;
+  let gtotal = 0.0;
+  let btotal = 0.0;
+  const offset = Math.floor(matrixsize / 2);
+  for (let i = 0; i < matrixsize; i++){
+    for (let j = 0; j < matrixsize; j++){
+      
+      // What pixel are we testing
+      const xloc = (x + i - offset);
+      const yloc = (y + j - offset);
+      let loc = (xloc + img.width * yloc) * 4;
+
+      // Make sure we haven't walked off our image, we could do better here
+      loc = constrain(loc, 0 , img.pixels.length - 1);
+
+      // Calculate the convolution
+      // retrieve RGB values
+      rtotal += (img.pixels[loc]) * matrix[i][j];
+      gtotal += (img.pixels[loc + 1]) * matrix[i][j];
+      btotal += (img.pixels[loc + 2]) * matrix[i][j];
+    }
+  }
+  // Make sure RGB is within range
+  rtotal = constrain(rtotal, 0, 255);
+  gtotal = constrain(gtotal, 0, 255);
+  btotal = constrain(btotal, 0, 255);
+  
+  // Return the resulting color
+  return color(rtotal, gtotal, btotal);
+} 
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h1 id=kernel-transformations>Kernel transformations
+<a class=anchor href=#kernel-transformations>#</a></h1><h2 id=convolution>Convolution
+<a class=anchor href=#convolution>#</a></h2><p>In the context of computer vision, convolution refers to a mathematical operation that is used for image processing and analysis. It involves applying a filter, also known as a kernel, to an input image in order to produce an output image that emphasizes certain features of the original image, such as edges or textures.</p><p>During convolution, the kernel is &ldquo;slid&rdquo; or moved over the input image, with each position of the kernel producing a single output pixel. The value of the output pixel is determined by multiplying the corresponding values of the kernel with the input image pixels in that location and then summing the results.</p><div align=center><img src=https://raw.githubusercontent.com/sergio-sanchezo/showcase/main/content/sketches/convolutionGif.gif></div><p>Kernel transformation with convolution is a technique used in image processing to apply a filter or transformation to an image. In this technique, a small matrix, called a kernel or filter, is moved over the image, and for each pixel, the values of neighboring pixels are multiplied by the corresponding values in the kernel, and the results are summed up. The resulting value is then assigned to the central pixel. This process is repeated for all pixels in the image, resulting in a transformed image.</p><h2 id=solution>Solution
+<a class=anchor href=#solution>#</a></h2><p>In this solution we implemented 3 different filters based on 3 kernels, the first one is a kernel for edge detection, the second one is a kernel for sharpen filter and the third one is a kernel for blur filter, they can be used by simply pressing the keys listed below.</p><p>If you want to check how each kernel is composed check the following link: <a href=https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Details>Kernels</a>.</p><h3 id=edges-handling>Edges handling
+<a class=anchor href=#edges-handling>#</a></h3><p>In the convolution of the code, the concept of &ldquo;edges&rdquo; is used to deal with pixels at the image boundaries. In particular, the <code>constrain()</code> function is used to make sure that the position of the pixels does not go outside the allowed range of the image.</p><h3 id=brightness>Brightness
+<a class=anchor href=#brightness>#</a></h3><p>In this solution we also applied a brightness filter to the image, you can change the brightness by using the slider below the first image.</p><h3 id=binds>Binds
+<a class=anchor href=#binds>#</a></h3><table><thead><tr><th style=text-align:center><strong>Key</strong></th><th style=text-align:center><strong>Action</strong></th></tr></thead><tbody><tr><td style=text-align:center>r</td><td style=text-align:center>Show kernel for edge detection</td></tr><tr><td style=text-align:center>s</td><td style=text-align:center>Show kernel for sharpen filter</td></tr><tr><td style=text-align:center>b</td><td style=text-align:center>Show kernel for blur filter</td></tr><tr><td style=text-align:center>o</td><td style=text-align:center>Show original image</td></tr></tbody></table><h3 id=result>Result
+<a class=anchor href=#result>#</a></h3><p><strong>Note:</strong> A random image is being taken from <em><a href=https://picsum.photos>https://picsum.photos</a></em> feel free to reload this page and see a new image.</p><iframe id=breath style=width:720px;height:390px srcdoc='
         <!DOCTYPE html>
         <html>
           <head>
@@ -162,11 +272,67 @@ function convolution(x, y, matrix, matrixsize, img) {
           <body>
           </body>
         </html>
-      '></iframe><h2 id=convolution>Convolution
-<a class=anchor href=#convolution>#</a></h2><p>In the context of computer vision, convolution refers to a mathematical operation that is used for image processing and analysis. It involves applying a filter, also known as a kernel, to an input image in order to produce an output image that emphasizes certain features of the original image, such as edges or textures.</p><p>During convolution, the kernel is &ldquo;slid&rdquo; or moved over the input image, with each position of the kernel producing a single output pixel. The value of the output pixel is determined by multiplying the corresponding values of the kernel with the input image pixels in that location and then summing the results.</p><div align=center><img src=https://raw.githubusercontent.com/sergio-sanchezo/showcase/main/content/sketches/convolutionGif.gif></div><h2 id=edges-handling>Edges handling
-<a class=anchor href=#edges-handling>#</a></h2><p>In the convolution of the code, the concept of &ldquo;edges&rdquo; is used to deal with pixels at the image boundaries. In particular, the <code>constrain()</code> function is used to make sure that the position of the pixels does not go outside the allowed range of the image.</p><h1 id=image-histogram>Image histogram
-<a class=anchor href=#image-histogram>#</a></h1><h2 id=example-1>Example
-<a class=anchor href=#example-1>#</a></h2><iframe id=breath style=width:650px;height:330px srcdoc='
+      '></iframe><h3 id=code-explanation>Code explanation
+<a class=anchor href=#code-explanation>#</a></h3><p>The key of the filter process in the solution provided is using the <code>convolution()</code> function. This function takes the following parameters:</p><ul><li><p><strong>x and y:</strong> These represent the x and y coordinates of the pixel in the image that we want to apply convolution to.</p></li><li><p><strong>matrix:</strong> This is the kernel that we want to use for convolution. It is a two-dimensional array of numbers of size matrixsize x matrixsize.</p></li><li><p><strong>matrixsize:</strong> This parameter specifies the size of the kernel matrix. It is an odd number (3, 5, 7, etc.) because it allows for a central pixel in the kernel.</p></li><li><p><strong>img:</strong> This is the image that we want to apply convolution to.</p></li></ul><p>The function loops through each element in the kernel matrix, and for each element, it calculates the corresponding pixel location in the image based on the current x and y position and the current kernel element&rsquo;s position. The loc variable is used to store the index of the pixel&rsquo;s color channel (RGB) value in the img.pixels array.</p><p>The <code>offset</code> variable is calculated as half of the matrixsize. This is used later to ensure that the kernel is centered over the pixel we are working on.</p><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>convolution</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>, <span style=color:#a6e22e>matrix</span>, <span style=color:#a6e22e>matrixsize</span>, <span style=color:#a6e22e>img</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rtotal</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>gtotal</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>btotal</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>offset</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>floor</span>(<span style=color:#a6e22e>matrixsize</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>matrixsize</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>j</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>j</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>matrixsize</span>; <span style=color:#a6e22e>j</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>xloc</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>offset</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>yloc</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>j</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>offset</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>loc</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>xloc</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>yloc</span>) <span style=color:#f92672>*</span> <span style=color:#ae81ff>4</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>loc</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>loc</span>, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>rtotal</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>loc</span>] <span style=color:#f92672>*</span> <span style=color:#a6e22e>matrix</span>[<span style=color:#a6e22e>i</span>][<span style=color:#a6e22e>j</span>];
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>gtotal</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>loc</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>*</span> <span style=color:#a6e22e>matrix</span>[<span style=color:#a6e22e>i</span>][<span style=color:#a6e22e>j</span>];
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>btotal</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>loc</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>*</span> <span style=color:#a6e22e>matrix</span>[<span style=color:#a6e22e>i</span>][<span style=color:#a6e22e>j</span>];
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rtotal</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>rtotal</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>gtotal</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>gtotal</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>btotal</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>btotal</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>color</span>(<span style=color:#a6e22e>rtotal</span>, <span style=color:#a6e22e>gtotal</span>, <span style=color:#a6e22e>btotal</span>);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><p>For example, the edge detection kernel is a 3x3 matrix with the following values:</p><table><thead><tr><th>-1</th><th>-1</th><th>-1</th></tr></thead><tbody><tr><td>-1</td><td>8</td><td>-1</td></tr><tr><td>-1</td><td>-1</td><td>-1</td></tr></tbody></table><p>With this kernel the center pixel has a weight of 8, while the surrounding pixels have a weight of -1. This means that the center pixel has a stronger influence on the final result than the surrounding pixels.</p><p>If the region of the image under the kernel contains an edge or other sharp feature, then the central pixel will be much different from the surrounding pixels, resulting in a high value in the convolution.</p><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;r&#34;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>matrix</span> <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>      [<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>],
+</span></span><span style=display:flex><span>      [<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>8</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>],
+</span></span><span style=display:flex><span>      [<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>],
+</span></span><span style=display:flex><span>    ];
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Calculate the convolution result
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>getFilteredImage</span>(<span style=color:#a6e22e>img</span>, <span style=color:#a6e22e>matrix</span>, <span style=color:#a6e22e>matrixsize</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#75715e>// More kernel options
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#75715e>// ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span></code></pre></div></div></details><p>Finally for the brightness slider, we use the <code>changeBrightness()</code> and <code>applyBrightness()</code> functions to change the brightness of the image. These functions update all the three channels for each pixel of the image by adding or subtracting 10 units depending on the move of the slider.</p><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changeBrightness</span>(<span style=color:#a6e22e>img</span>, <span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>brightnessValue</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>2</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>brightnessValue</span> <span style=color:#f92672>-=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>applyBrightness</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyBrightness</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>loadPixels</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>+</span> <span style=color:#a6e22e>brightnessValue</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>+</span> <span style=color:#a6e22e>brightnessValue</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>+</span> <span style=color:#a6e22e>brightnessValue</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>r</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>g</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>(<span style=color:#a6e22e>b</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>updatePixels</span>();
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><h1 id=image-histogram>Image histogram
+<a class=anchor href=#image-histogram>#</a></h1><p>The RGB histograms show the distribution of color values in the image. The x-axis of the histograms represents the different color values (from 0 to 255), and the y-axis represents the frequency of occurrence of each color value in the image. The red, green, and blue histograms are shown in different colors, and they allow us to visualize the amount of red, green, and blue in the image.</p><h2 id=solution-1>Solution
+<a class=anchor href=#solution-1>#</a></h2><iframe id=breath style=width:650px;height:330px srcdoc='
         <!DOCTYPE html>
         <html>
           <head>
@@ -235,5 +401,37 @@ function drawHistogram(histogram, x, y, c) {
           <body>
           </body>
         </html>
-      '></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/sergio-sanchezo/showcase/commit/b233d4afdcf9b44a5d2d6a03df80c881fe4a80e0 title='Last modified by Sergio Sanchez | April 7, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>April 7, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#kernel-transformations>Kernel transformations</a><ul><li><a href=#example>Example</a></li><li><a href=#convolution>Convolution</a></li><li><a href=#edges-handling>Edges handling</a></li></ul></li><li><a href=#image-histogram>Image histogram</a><ul><li><a href=#example-1>Example</a></li></ul></li></ul></nav></div></aside></main></body></html>
+      '></iframe><h3 id=code-explanation-1>Code explanation
+<a class=anchor href=#code-explanation-1>#</a></h3><p>Basically here we make three arrays to store the values of each color channel histogram. Then we iterate over the pixels of the image and increment the corresponding array value for each color channel. Finally, we draw the histograms in the <code>draw()</code> function.</p><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rhisto</span>, <span style=color:#a6e22e>ghisto</span>, <span style=color:#a6e22e>bhisto</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>histogramWidth</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>256</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>histogramHeight</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>100</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pixelDensity</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>loadPixels</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rhisto</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Array(<span style=color:#a6e22e>histogramWidth</span>).<span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>ghisto</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Array(<span style=color:#a6e22e>histogramWidth</span>).<span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>bhisto</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Array(<span style=color:#a6e22e>histogramWidth</span>).<span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rhisto</span>[<span style=color:#a6e22e>r</span>]<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ghisto</span>[<span style=color:#a6e22e>g</span>]<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>bhisto</span>[<span style=color:#a6e22e>b</span>]<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><p>In the <code>drawHistogram()</code> function, we draw the histogram for each color channel. The <code>histogramMax</code> variable stores the maximum value of the histogram. This is used to scale the histogram to the height of the canvas. The <code>map()</code> function is used to map the histogram values to the height of the canvas (that&rsquo;s why we got the histogramMax value in order to scale everything) and that&rsquo;s all, we finally draw the lines representing the frequencies of each color.</p><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>drawHistogram</span>(<span style=color:#a6e22e>histogram</span>, <span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>, <span style=color:#a6e22e>c</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>histogramMax</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>max</span>(<span style=color:#a6e22e>histogram</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#a6e22e>c</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>histogram</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>h</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>map</span>(<span style=color:#a6e22e>histogram</span>[<span style=color:#a6e22e>i</span>], <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>histogramMax</span>, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>histogramHeight</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span>, <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>h</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/sergio-sanchezo/showcase/commit/1fb2ca967a202b99221e003df57e024cfcd9d55d title='Last modified by Sergio Sanchez | April 7, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>April 7, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a><ul><li><a href=#example---previous-work>Example - Previous Work</a></li></ul></li><li><a href=#kernel-transformations>Kernel transformations</a><ul><li><a href=#convolution>Convolution</a></li><li><a href=#solution>Solution</a><ul><li><a href=#edges-handling>Edges handling</a></li><li><a href=#brightness>Brightness</a></li><li><a href=#binds>Binds</a></li><li><a href=#result>Result</a></li><li><a href=#code-explanation>Code explanation</a></li></ul></li></ul></li><li><a href=#image-histogram>Image histogram</a><ul><li><a href=#solution-1>Solution</a><ul><li><a href=#code-explanation-1>Code explanation</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
