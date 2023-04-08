@@ -475,3 +475,5 @@ As group we are looking forward the development of this field, to see how the ne
 # References
 
 Goldstein, E. B., & Cacciamani, L. (2021). Sensation and perception. Cengage Learning.
+
+Swain, C. T. (1997, April). Integration of monocular cues to create depth effect. In 1997 IEEE International Conference on Acoustics, Speech, and Signal Processing (Vol. 4, pp. 2745-2748). IEEE.

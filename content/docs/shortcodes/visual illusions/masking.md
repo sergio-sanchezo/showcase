@@ -514,3 +514,12 @@ As group we noticed that we were used to think about *processing* limited by the
 It is really clear that the applications of this techniques are endless, this image processing methods can be used in multiple applications like medical imaging, image compression, image restoration, image enhancement, image segmentation, and many more.
 
 It would be really challenging to implement some of these techniques in order to solve real-world problems, but it would be a great experience for our profesional career.
+
+# References
+
+Convolución (2023) Wikipedia. Wikimedia Foundation. Available at: https://es.wikipedia.org/wiki/Convoluci%C3%B3n (Accessed: April 6, 2023). 
+
+T. S. Huang, W. F. Schreiber and O. J. Tretiak, "Image processing," in Proceedings of the IEEE, vol. 59, no. 11, pp. 1586-1609, Nov. 1971, doi: 10.1109/PROC.1971.8491.
+
+Vicapow (no date) Image kernels explained visually, Explained Visually. Available at: https://setosa.io/ev/image-kernels/ (Accessed: April 6, 2023). 
+
