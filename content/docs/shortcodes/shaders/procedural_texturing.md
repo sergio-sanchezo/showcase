@@ -20,13 +20,18 @@ We can see other textures being applied such as Leather, Wood or Marble
 
 nTop. How to create procedural textures for design and engineering
 
-# Scintillating grid illusion
+# Offset patterns
 
-The scintillating grid illusion is an optical illusion, discovered by E. and B. Lingelbach and M. Schrauf in 1994. It is often considered a variation of the Hermann grid illusion but possesses different properties.
+What we want to draw here are several rows of a given shape(in thsi case bricks), every other row will have a offset in
+the X axis giving this view:
 
-It is constructed by superimposing white discs on the intersections of orthogonal gray bars on a black background. **Dark dots seem to appear and disappear rapidly at random intersections, hence the label "scintillating"**. When a person keeps his or her eyes directly on a single intersection, the dark dot does not appear. The dark dots disappear if one is too close to or too far from the image.
+![Wall](https://thebookofshaders.com/09/brick.jpg)
 
-## Example
+Great book of shaders. Patricio Gonzales and Jen Lowe. https://thebookofshaders.com/09/
+
+Then we will map this pattern into a 3D shape, in this case we chose a **cone**
+
+## Key chunks explanation
 
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 
