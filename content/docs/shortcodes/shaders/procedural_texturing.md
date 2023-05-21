@@ -9,6 +9,11 @@ Adapt other patterns from the book of shaders (refer also to the shadertoy colle
 
 The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5.Graphics object.
 
+**Note**
+
+All the code developed in this section is based on **Great book of shaders. Patricio Gonzales and Jen Lowe**. Their work
+made possible a better understanding about thsi subject.
+
 # Previous Work
 
 Apparently procedural texturing is widely used to generate surface textures, given its low space and time cost. Here we can see
@@ -22,7 +27,7 @@ nTop. How to create procedural textures for design and engineering
 
 # Offset patterns
 
-What we want to draw here are several rows of a given shape(in thsi case bricks), every other row will have a offset in
+What we want to draw here are several rows of a given shape(in this case bricks), and every other row will have a offset in
 the X axis giving this view:
 
 ![Wall](https://thebookofshaders.com/09/brick.jpg)
@@ -31,7 +36,7 @@ Great book of shaders. Patricio Gonzales and Jen Lowe. https://thebookofshaders.
 
 Then we will map this pattern into a 3D shape, in this case we chose a **cone**
 
-## Key chunks explanation
+## Implementation
 
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 
@@ -123,36 +128,22 @@ function draw() {
 ```
 {{< /details >}}
 
-Here we set up a couple of sliders that will help to make the illusion interactive and more interesting
+This single line single-handedly carries the offset process, it decides whether or not a row should have offset, and 
+takes a "step" if that is the case.
+
 ```js
-function setup() {
-  createCanvas(500, 500);
-  slider = createSlider(0.1, 5, sliderValue, 0.1);
-  slider.position(10, 10);
-  slider.style('width', '80px');
-  
-  slider_width = createSlider(0.1, 5, sliderValue, 0.1);
-  slider_width.position(10, 30);
-  slider_width.style('width', '80px');
-}
+_st.x += step(1., mod(_st.y,2.0)) * 0.5;
 ```
 
-Here is the loop to help as create the grid an its points, everything its modular, being influenced by some variables like the separation or number of lines that at the same time are controlled by the sliders.
-
+In this part we create the cone where the texture is going to be mapped in, with its corresponding orbit control
 ```js
 
+function draw() {
+  background(33);
+  orbitControl();
+  cone(100, 200);
+}
 
-  for (i=0;i< numberOfLines;i++) {
-  stroke(200);
-  line(0, i*separation, side, i*separation);
-  line(i*separation, 0, i*separation, side);
-  }
-  for (j=0;j<numberOfLines;j++) {
-  for (k=0; k<numberOfLines; k++) {
-  stroke(255);
-  circle(j*separation,k*separation,5);
-}
-}
 ```
 # Müller-Lyer Illusion
 
