@@ -41,42 +41,23 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
 {{< p5-global-iframe id="breath" width="600" height="600" >}}
 
 
-let sliderValue = 1;
-let side = 3000;
-let separation = 60;
-let numberOfLines = side/separation;
-let minStroke = 5;
-function setup() {
-  createCanvas(500, 500);
-  slider = createSlider(0.1, 5, sliderValue, 0.1);
-  slider.position(10, 10);
-  slider.style('width', '80px');
-  
-  slider_width = createSlider(0.1, 5, sliderValue, 0.1);
-  slider_width.position(10, 30);
-  slider_width.style('width', '80px');
-}
 
-function draw() { 
-  let zoom = slider.value();  
-  scale(zoom);
-  strokeVal = max(minStroke, 30/slider_width.value());
-  background(0);
-  stroke(215);
-  strokeWeight(strokeVal);
-  for (i=0;i< numberOfLines;i++) {
-  stroke(200);
-  line(0, i*separation, side, i*separation);
-  line(i*separation, 0, i*separation, side);
-  }
-  for (j=0;j<numberOfLines;j++) {
-  for (k=0; k<numberOfLines; k++) {
-  stroke(255);
-  circle(j*separation,k*separation,5);
-}
-}
-
-}
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js></script>
+             <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script> 
+            
+            
+            
+            
+            <script src=./procedural_texturing/offset.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      
 {{< /p5-global-iframe >}}
 
 # Solution
