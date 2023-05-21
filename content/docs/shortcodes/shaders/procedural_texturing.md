@@ -50,7 +50,7 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
             
             
             
-            <script src="./procedural_texturing/offset.js"></script>
+            <script src="offset.js"></script>
           </head>
           <body>
           </body>
