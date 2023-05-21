@@ -11,13 +11,14 @@ The goal in procedural texturing is to procedurally generate a texture using an 
 
 # Previous Work
 
-Looking around on the internet, some examples of optical illusions built on top of p5 can be found. For example in this Medium article the author presents
-the Kanizsa illusion, where illusory contorns give the perception of shape. The author gives a step by step approach to implement the illusion, and a neurological
-explanation.
+Apparently procedural texturing is widely used to generate surface textures, given its low space and time cost. Here we can see
+a texture of roughness being applied to a sphere, roughness being one of the most straightforward, procedural texture
 
-![Ilussion](https://miro.medium.com/v2/resize:fit:640/format:webp/1*b9pai70Ql9-9TXdvsmrLlg.jpeg)
+![Roughness procedural texture](https://www.ntop.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fg5181r9i%2Fproduction%2F181ef11a7d55218e988e5469450b4d455118a21a-2048x1099.jpg%3Fq%3D75%26fit%3Dclip%26auto%3Dformat&w=1920&q=80)
 
-Medium. Creating Illusions in p5.js -Dynamic Kanizsa Illusion. Nazia Fakhruddin, 2019. https://naziafakhruddin.medium.com/creating-illusions-in-p5-js-dynamic-kanizsa-illusion-part-4-af9fe72c5ec7
+We can see other textures being applied such as Leather, Wood or Marble
+
+nTop. How to create procedural textures for design and engineering
 
 # Scintillating grid illusion
 
@@ -266,3 +267,4 @@ understanding of how our brains process the vision, there are a lot of theories 
 # References
 
 -  Great book of shaders. Patricio Gonzales and Jen Lowe. https://thebookofshaders.com/09/
+- How to create procedural textures for design and engineering. nTop. https://www.ntop.com/resources/blog/how-to-procedural-textures/
