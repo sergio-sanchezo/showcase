@@ -38,9 +38,8 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
 
 ## Implementation
 
-{{< p5-div sketch="./procedural_texturing/offset.js" >}}
 
-{{< p5-global-iframe id="breath" width="600" height="600" >}}
+{{< p5-global-iframe id="offset" width="600" height="600" >}}
         <!DOCTYPE html>
         <html>
           <head>
@@ -51,7 +50,7 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
             
             
             
-            <script src=./procedural_texturing/offset.js></script>
+            <script src="./procedural_texturing/offset.js"></script>
           </head>
           <body>
           </body>
