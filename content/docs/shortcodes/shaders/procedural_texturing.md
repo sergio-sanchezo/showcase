@@ -39,7 +39,7 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
 ## Implementation
 
 
-{{< p5-global-iframe id="offset" width="600" height="600" >}}
+{{< p5-global-iframe id="test" width="525" height="525" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
 let pg;
 let truchetShader;
 
