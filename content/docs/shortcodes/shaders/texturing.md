@@ -1,7 +1,7 @@
 ## Implementation
 
 
-{{< p5-global-iframe id="test" width="400" height="400" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
+{{< p5-global-iframe id="test" width="700" height="500" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
 let lumaShader;
 let hsvShader;
 let src;
