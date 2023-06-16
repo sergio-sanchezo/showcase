@@ -46,7 +46,7 @@ let truchetShader;
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
-  truchetShader = readShader('offset.frag');
+  truchetShader = readShader('../../../../sketches/extra/offset.frag');
 }
 
 function setup() {
