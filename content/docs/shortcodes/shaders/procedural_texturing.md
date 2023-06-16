@@ -39,14 +39,14 @@ Then we will map this pattern into a 3D shape, in this case we chose a **cone**
 ## Implementation
 
 
-{{< p5-global-iframe id="test" width="525" height="525" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
+{{< p5-global-iframe id="test" width="400" height="400" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
 
 let pg;
 let truchetShader;
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
-  truchetShader = readShader('../../../../sketches/extra/offset.frag');
+  truchetShader = readShader('offset.frag');
 }
 
 function setup() {
