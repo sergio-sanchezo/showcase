@@ -1,11 +1,11 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Exercise Adapt other patterns from the book of shaders (refer also to the shadertoy collection) and map them as textures onto other 3D shapes. Introduction # The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Exercise Adapt other patterns from the book of shaders (refer also to the shadertoy collection) and map them as textures onto other 3D shapes. Introduction # The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5."><meta property="og:type" content="article"><meta property="og:url" content="https://sergio-sanchezo.github.io/showcase/docs/shortcodes/shaders/procedural_texturing/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-16T18:03:06-05:00"><title>Procedural Texturing | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Exercise Adapt other patterns from the book of shaders (refer also to the shadertoy collection) and map them as textures onto other 3D shapes. Introduction # The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Exercise Adapt other patterns from the book of shaders (refer also to the shadertoy collection) and map them as textures onto other 3D shapes. Introduction # The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5."><meta property="og:type" content="article"><meta property="og:url" content="https://sergio-sanchezo.github.io/showcase/docs/shortcodes/shaders/procedural_texturing/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-16T18:05:41-05:00"><title>Procedural Texturing | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
 <script defer src=/showcase/en.search.min.3a8d658c77eb93c7f12a2b8af49a700131e474f288eefb605d9fa61576dbe5a7.js integrity="sha256-Oo1ljHfrk8fxKiuK9JpwATHkdPKI7vtgXZ+mFXbb5ac=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><input type=checkbox id=section-28af9825a6c9a42a944ad080d209e122 class=toggle>
 <label for=section-28af9825a6c9a42a944ad080d209e122 class="flex justify-between"><a href=/showcase/docs/shortcodes/miembros/>Miembros</a></label><ul><li><a href=/showcase/docs/shortcodes/miembros/Arturo-Ascarza/>Arturo Ascarza</a></li><li><a href=/showcase/docs/shortcodes/miembros/Carlos-Cortes/>Carlos Cortes</a></li><li><a href=/showcase/docs/shortcodes/miembros/Sergio-Sanchez/>Sergio Sanchez</a></li></ul></li><li><input type=checkbox id=section-6d6445ed16f829ce6720abb33c55105e class=toggle checked>
 <label for=section-6d6445ed16f829ce6720abb33c55105e class="flex justify-between"><a href=/showcase/docs/shortcodes/shaders/>Shaders</a></label><ul><li><a href=/showcase/docs/shortcodes/shaders/post_effects/>Post Effects</a></li><li><a href=/showcase/docs/shortcodes/shaders/image_processing/>Image Processing</a></li><li><a href=/showcase/docs/shortcodes/shaders/procedural_texturing/ class=active>Procedural Texturing</a></li></ul></li><li><input type=checkbox id=section-f46a4e810e0595032edc1fcc1384d4ee class=toggle>
 <label for=section-f46a4e810e0595032edc1fcc1384d4ee class="flex justify-between"><a href=/showcase/docs/shortcodes/visual-illusions/>Visual Illusions</a></label><ul><li><a href=/showcase/docs/shortcodes/visual-illusions/monocular_cues/>Monocular Cues</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/aplications_visual_phenomena/>Aplications Visual Phenomena</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/moire_kinegram/>Moire Kinegram</a></li><li><a href=/showcase/docs/shortcodes/visual-illusions/masking/>Masking</a></li></ul></li></ul></li></ul><ul><li><a href=/showcase/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Procedural Texturing</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a></li><li><a href=#offset-patterns>Offset patterns</a><ul><li><a href=#implementation>Implementation</a></li></ul></li><li><a href=#solution>Solution</a></li><li><a href=#müller-lyer-illusion>Müller-Lyer Illusion</a></li><li><a href=#the-depth-cue-explanation>The Depth Cue Explanation</a><ul><li><a href=#example>Example</a></li></ul></li><li><a href=#solution-1>Solution</a></li><li><a href=#conclusion>Conclusion</a></li><li><a href=#future-work>Future Work</a></li><li><a href=#references>References</a></li></ul></nav></aside></header><article class=markdown><blockquote class="book-hint info"><strong>Exercise</strong>
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a></li><li><a href=#offset-patterns>Offset patterns</a><ul><li><a href=#implementation>Implementation</a></li></ul></li><li><a href=#references>References</a></li></ul></nav></aside></header><article class=markdown><blockquote class="book-hint info"><strong>Exercise</strong>
 Adapt other patterns from the book of shaders (refer also to the shadertoy collection) and map them as textures onto other 3D shapes.</blockquote><h1 id=introduction>Introduction
 <a class=anchor href=#introduction>#</a></h1><p>The goal in procedural texturing is to procedurally generate a texture using an algorithm in such a way that the result can be mapped onto a shape as a texture. Procedural texturing requires the use of a frame buffer object which in p5.js is implemented as a p5.Graphics object.</p><p><strong>Note</strong></p><p>All the code developed in this section is based on <strong>Great book of shaders. Patricio Gonzales and Jen Lowe</strong>. Their work
 made possible a better understanding about thsi subject.</p><h1 id=previous-work>Previous Work
@@ -26,6 +26,7 @@ the X axis giving this view:</p><p><img src=https://thebookofshaders.com/09/bric
             
             <script>
               
+
 let pg;
 let truchetShader;
 
@@ -73,150 +74,6 @@ function mouseMoved() {
           <body>
           </body>
         </html>
-      "></iframe><h1 id=solution>Solution
-<a class=anchor href=#solution>#</a></h1><p>So basically to implement the grid illusions, we have to put a black background, then draw a gray grid, with white points that cover the intersection of rows and columns.</p><p>To do so, we implemented the following code</p><hr><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sliderValue</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>side</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3000</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>separation</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>60</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>numberOfLines</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>side</span><span style=color:#f92672>/</span><span style=color:#a6e22e>separation</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>minStroke</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>500</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>0.1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#a6e22e>sliderValue</span>, <span style=color:#ae81ff>0.1</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;80px&#39;</span>);
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider_width</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>0.1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#a6e22e>sliderValue</span>, <span style=color:#ae81ff>0.1</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider_width</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>30</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider_width</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;80px&#39;</span>);
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() { 
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>zoom</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>value</span>();  
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>scale</span>(<span style=color:#a6e22e>zoom</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>strokeVal</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>max</span>(<span style=color:#a6e22e>minStroke</span>, <span style=color:#ae81ff>30</span><span style=color:#f92672>/</span><span style=color:#a6e22e>slider_width</span>.<span style=color:#a6e22e>value</span>());
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>0</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>215</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#a6e22e>strokeVal</span>);
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#a6e22e>i</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>numberOfLines</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>200</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>line</span>(<span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>i</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>, <span style=color:#a6e22e>side</span>, <span style=color:#a6e22e>i</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>i</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>i</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>, <span style=color:#a6e22e>side</span>);
-</span></span><span style=display:flex><span>  }
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#a6e22e>j</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;<span style=color:#a6e22e>j</span><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>numberOfLines</span>;<span style=color:#a6e22e>j</span><span style=color:#f92672>++</span>) {
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#a6e22e>k</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>k</span><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>numberOfLines</span>; <span style=color:#a6e22e>k</span><span style=color:#f92672>++</span>) {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>255</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>j</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>,<span style=color:#a6e22e>k</span><span style=color:#f92672>*</span><span style=color:#a6e22e>separation</span>,<span style=color:#ae81ff>5</span>);
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div></div></details><p>This single line single-handedly carries the offset process, it decides whether or not a row should have offset, and
-takes a &ldquo;step&rdquo; if that is the case.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>_st</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>step</span>(<span style=color:#ae81ff>1.</span>, <span style=color:#a6e22e>mod</span>(<span style=color:#a6e22e>_st</span>.<span style=color:#a6e22e>y</span>,<span style=color:#ae81ff>2.0</span>)) <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.5</span>;
-</span></span></code></pre></div><p>In this part we create the cone where the texture is going to be mapped in, with its corresponding orbit control</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>33</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>orbitControl</span>();
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>cone</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>200</span>);
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h1 id=müller-lyer-illusion>Müller-Lyer Illusion
-<a class=anchor href=#m%c3%bcller-lyer-illusion>#</a></h1><p>This illusion shows how our perception of line length is affected by the presence of arrowheads on the ends of the lines.</p><h1 id=the-depth-cue-explanation>The Depth Cue Explanation
-<a class=anchor href=#the-depth-cue-explanation>#</a></h1><p>Depth plays an important role in our ability to judge distance. One explanation of the Muller-Lyer illusion is that our brains perceive the depths of the two shafts based upon depth cues. When the fins are pointing in toward the shaft of the line, we perceive it as sloping away much like the corner of a building. This depth cue leads us to see that line as further away and therefore shorter.</p><h2 id=example>Example
-<a class=anchor href=#example>#</a></h2><iframe id=breath style=width:400px;height:400px srcdoc="
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
-            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-            
-            
-            
-            
-            
-            <script>
-              
-
-
-function setup() {
-  createCanvas(400, 400);
-  slider = createSlider(50, 200, 100, 0.1);
-  slider.position(10, 10);
-  slider.style('width', '80px');
-}
-
-function draw() {
-background(220);
-  let sep = slider.value()
-// primera linea
-line(sep, 140, 400-sep, 140);
-//flecha 1
-line(sep, 140, sep-20, 120);
-line(sep, 140, sep-20, 160);
-//flecha 2
-line(400-sep, 140, 400-sep+20, 120);
-line(400-sep, 140, 400-sep+20, 160);
-
-//segunda linea
-line(sep, 200, 400-sep, 200);
-//flecha 1
-line(sep, 200, sep+20, 220);
-line(sep, 200, sep+20, 180);
-//flecha 2
-line(400-sep, 200, 400-sep-20, 220);
-line(400-sep, 200, 400-sep-20, 180);
-}
-
-
-            </script>
-          </head>
-          <body>
-          </body>
-        </html>
-      "></iframe><h1 id=solution-1>Solution
-<a class=anchor href=#solution-1>#</a></h1><p>This ilussion is pretty simple to implement. We draw two parallel lines, with some y-separation between them, the lines are as said parallel and the same length as well
-in one of them we implement an arrow pointing outwards and the other pointing inward</p><hr><details><summary>Code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>0.1</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;80px&#39;</span>);
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
-</span></span><span style=display:flex><span><span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>220</span>);
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sep</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>value</span>()
-</span></span><span style=display:flex><span><span style=color:#75715e>// primera linea
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>);
-</span></span><span style=display:flex><span><span style=color:#75715e>//flecha 1
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>, <span style=color:#a6e22e>sep</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>120</span>);
-</span></span><span style=display:flex><span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>, <span style=color:#a6e22e>sep</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>160</span>);
-</span></span><span style=display:flex><span><span style=color:#75715e>//flecha 2
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span><span style=color:#f92672>+</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>120</span>);
-</span></span><span style=display:flex><span><span style=color:#a6e22e>line</span>(<span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>140</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span><span style=color:#f92672>+</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>160</span>);
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>//segunda linea
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>);
-</span></span><span style=display:flex><span><span style=color:#75715e>//flecha 1
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>, <span style=color:#a6e22e>sep</span><span style=color:#f92672>+</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>220</span>);
-</span></span><span style=display:flex><span><span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>, <span style=color:#a6e22e>sep</span><span style=color:#f92672>+</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>180</span>);
-</span></span><span style=display:flex><span><span style=color:#75715e>//flecha 2
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>line</span>(<span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>220</span>);
-</span></span><span style=display:flex><span><span style=color:#a6e22e>line</span>(<span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>400</span><span style=color:#f92672>-</span><span style=color:#a6e22e>sep</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>, <span style=color:#ae81ff>180</span>);
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div></div></details><p>Here we set up a slider that will allow the user to experiment with the length of the lines.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>0.1</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>);
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;80px&#39;</span>);
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h1 id=conclusion>Conclusion
-<a class=anchor href=#conclusion>#</a></h1><p>As humans we have evolved into certain environment and to survive we acquired certain neurological features that would make us more likely to not die, that is why
-we do not see the world as it is, but we see it through perceptions, that are processed by our brain. And or brain tries to give us the most of this perceptions
-applying patterns that we would generally see.</p><p><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Checker_shadow_illusion.svg/200px-Checker_shadow_illusion.svg.png alt="Cilinder Illusion">
-Wikipedia, Optical Illusion</p><p>In this image for example, our brain recognise that there might be a pattern of white blocks and black blocks alternating, and may be the brain recognises too that the
-cilinder might be producing shadow behind it, therefore the A and B blocks look the same to us(or at least to me), however the blocks are the same color, you can confirm
-it by placing your finger in the middle of them. This is a clear example of our brain trying to jump to fast conclusions but failing to show the reality. But this
-is not necesarilly bad, optical illusions can be a wonderful tool to us in order to create cool art, optical illusions are pretty eye catching and a very entretaining.</p><h1 id=future-work>Future Work
-<a class=anchor href=#future-work>#</a></h1><p>With practice we hope to be able to gain more skills in order to implement more and more complex visual illusions. In this area there is also a lot of work to do in the
-understanding of how our brains process the vision, there are a lot of theories of different illusions that we hope are resolved and give us more enlightment.</p><h1 id=references>References
-<a class=anchor href=#references>#</a></h1><ul><li>Great book of shaders. Patricio Gonzales and Jen Lowe. <a href=https://thebookofshaders.com/09/>https://thebookofshaders.com/09/</a></li><li>How to create procedural textures for design and engineering. nTop. <a href=https://www.ntop.com/resources/blog/how-to-procedural-textures/>https://www.ntop.com/resources/blog/how-to-procedural-textures/</a></li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/sergio-sanchezo/showcase/commit/5facf97fffd8ff02c922dec3b353853a20b020e1 title='Last modified by Carlos Cortés | June 16, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>June 16, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a></li><li><a href=#offset-patterns>Offset patterns</a><ul><li><a href=#implementation>Implementation</a></li></ul></li><li><a href=#solution>Solution</a></li><li><a href=#müller-lyer-illusion>Müller-Lyer Illusion</a></li><li><a href=#the-depth-cue-explanation>The Depth Cue Explanation</a><ul><li><a href=#example>Example</a></li></ul></li><li><a href=#solution-1>Solution</a></li><li><a href=#conclusion>Conclusion</a></li><li><a href=#future-work>Future Work</a></li><li><a href=#references>References</a></li></ul></nav></div></aside></main></body></html>
+      "></iframe><h1 id=references>References
+<a class=anchor href=#references>#</a></h1><ul><li>Great book of shaders. Patricio Gonzales and Jen Lowe. <a href=https://thebookofshaders.com/09/>https://thebookofshaders.com/09/</a></li><li>How to create procedural textures for design and engineering. nTop. <a href=https://www.ntop.com/resources/blog/how-to-procedural-textures/>https://www.ntop.com/resources/blog/how-to-procedural-textures/</a></li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/sergio-sanchezo/showcase/commit/a5eb8062d729724c64b7a311ca17ddbdb4115ce9 title='Last modified by Carlos Cortés | June 16, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>June 16, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#previous-work>Previous Work</a></li><li><a href=#offset-patterns>Offset patterns</a><ul><li><a href=#implementation>Implementation</a></li></ul></li><li><a href=#references>References</a></li></ul></nav></div></aside></main></body></html>
