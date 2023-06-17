@@ -33,7 +33,7 @@ function setup() {
   shader(lumaShader);
 
   video_on = createCheckbox('video', false);
-  video_on.position(90,10)
+  video_on.position(10,90)
   video_on.style('color', 'white');
   video_on.changed(() => {
   src = video_on.checked() ? video_src : img_src;
