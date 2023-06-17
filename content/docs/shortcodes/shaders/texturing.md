@@ -18,9 +18,9 @@ function preload() {
     { varyings: Tree.texcoords2 });
   //hsvShader = readShader('../../../../sketches/extra/hsv.frag',
   //  { varyings: Tree.texcoords2 });
-  // video source: https://t.ly/LWUs2
-  //video_src = createVideo(['/sketches/shaders/wagon.webm']);
-  //video_src.hide(); // by default video shows up in separate dom
+
+  video_src = createVideo(['../../../../sketches/shaders/wagon.webm']);
+  video_src.hide(); // by default video shows up in separate dom
   // image source: https://t.ly/Dz8W
   img_src = loadImage('https://picsum.photos/id/401/600');
   src = img_src;
@@ -31,14 +31,14 @@ function setup() {
   noStroke();
   textureMode(NORMAL);
   shader(lumaShader);
-  //shader(hsvShader);
-  //video_on = createCheckbox('video', false);
-  //video_on.style('color', 'white');
-  //video_on.changed(() => {
-  //  src = video_on.checked() ? video_src : img_src;
-  //  video_on.checked() ? video_src.loop() : video_src.pause();
-  //});
-  //video_on.position(10, 10);
+
+  video_on = createCheckbox('video', false);
+  video_on.style('color', 'white');
+  video_on.changed(() => {
+  src = video_on.checked() ? video_src : img_src;
+  video_on.checked() ? video_src.loop() : video_src.pause();
+  });
+  video_on.position(10, 10);
   
   hsv = createCheckbox('hsv', false);
   hsv.position(10, 10);
