@@ -26,8 +26,6 @@ Post effects such as grayscale, sepia, and inverted are commonly used image tran
 
 ***Note** The lens of the code above was adapted from [shadertoy](https://www.shadertoy.com/results?query=magnifier), and the effects were inspired from this [github repo](https://mdn.github.io/dom-examples/canvas/pixel-manipulation/color-manipulation.html)*
 
-***Note:** A random image is being taken from *https://picsum.photos* feel free to reload this page and see a new image.*
-
 {{< p5-global-iframe id="test" width="525" height="525" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js">}}
 
 let circleEffect;
