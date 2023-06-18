@@ -1,3 +1,21 @@
+---
+weight: 2
+---
+
+{{< hint info >}} **Exercise**
+Implement other coloring brightness tools such as HSV value V, HSL lightness L or Component average.{{< /hint >}}
+
+# Introduction
+
+The goal in this exercise is to apply different color models to analyze better the characteristics of an image. Models such as HSV or HSL. 
+
+# Previous Work
+
+The HSL representation models the way different paints mix together to create color in the real world, with the lightness dimension resembling the varying amounts of black or white paint in the mixture (e.g. to create "light red", a red pigment can be mixed with white paint; this white paint corresponds to a high "lightness" value in the HSL representation). Fully saturated colors are placed around a circle at a lightness value of ½, with a lightness value of 0 or 1 corresponding to fully black or white, respectively.
+
+![HSL and HSV](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hsl-hsv_models.svg/435px-Hsl-hsv_models.svg.png)
+
+
 ## Implementation
 
 
@@ -90,3 +108,8 @@ function draw() {
   endShape();
 }
 {{< /p5-global-iframe >}}
+
+
+# References
+
+-  HSL and HSV. Wikipedia. https://en.wikipedia.org/wiki/HSL_and_HSV
