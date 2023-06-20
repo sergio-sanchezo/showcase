@@ -10,6 +10,7 @@ Welcome to the [gohugo](https://gohugo.io/) template to create rich content [aca
 # Videos
 
 **Video Presentación 1:** https://www.loom.com/share/bcf91acd459849a6a7f4b6f315eb6883
+**Video Presentación 2:** https://www.loom.com/share/4e456a59d11a486b8d7af94457325511
 
 ## Hacking
 
